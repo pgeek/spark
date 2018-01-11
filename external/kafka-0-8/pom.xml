@@ -25,9 +25,9 @@
     <relativePath>../../pom.xml</relativePath>
   </parent>
 
-  <artifactId>spark-streaming-kafka-0-8_2.11</artifactId>
+  <artifactId>xm-spark-streaming-kafka-0-8_2.11</artifactId>
   <properties>
-    <sbt.project.name>streaming-kafka-0-8</sbt.project.name>
+    <sbt.project.name>xm-streaming-kafka-0-8</sbt.project.name>
   </properties>
   <packaging>jar</packaging>
   <name>Spark Integration for Kafka 0.8</name>
@@ -106,4 +106,18 @@
     <outputDirectory>target/scala-${scala.binary.version}/classes</outputDirectory>
     <testOutputDirectory>target/scala-${scala.binary.version}/test-classes</testOutputDirectory>
   </build>
+
+<distributionManagement>
+        <repository>
+            <id>artifactory</id>
+        <name>gitlab.ximalaya-releases</name>
+        <url>http://artifactory.ximalaya.com/artifactory/thirdparty-releases-local</url>
+        </repository>
+        <snapshotRepository>
+            <id>artifactory</id>
+            <name>nali-snapshots</name>
+            <url>http://artifactory.ximalaya.com/artifactory/ximalaya-snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
+
 </project>
